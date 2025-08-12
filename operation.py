@@ -16,10 +16,11 @@ if temp == 1:
     number = int(input("Введите число для подсчёта операций:"))
     print("Количкство операций до нуля =",countOperation(number))
 elif temp == 2:
-    file = open("operation.txt",'r')
+    file = open("operation.txt",'r+')
     strNumber = ""
     for line in file:
         strNumber = line
     number = int(strNumber)
-    print("Количкство операций до нуля =",countOperation(number))
+    file.write("\n")
+    file.write("Количкство операций до нуля ="+ str(countOperation(number)))
     file.close()
