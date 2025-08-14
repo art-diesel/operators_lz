@@ -22,6 +22,8 @@ elif temp == 2:
     q = int(numbers[1])
     n = int(numbers[2])
     file.close()
-    print("Сумма прогрессии =",geoprogres(b,q,n))
+    file.write("\n")
+    file.write("Количкство операций до нуля ="+ str(geoprogres(b,q,n)))
+    file.close()
 else:
     print("Выберете один из двух выше указаных выриантов!")
